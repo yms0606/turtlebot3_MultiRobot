@@ -1,0 +1,10 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: turtlebot3
+    relative_path: urdf/robot.urdf
+  srdf:
+    relative_path: config/turtlebot3_manipulation.srdf
+  package_settings:
+    author_name: jsh
+    author_email: hwanjung333@naver.com
+    generated_timestamp: 1734107692

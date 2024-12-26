@@ -1,0 +1,434 @@
+<?xml version="1.0" ?>
+<robot name="rx_m52">
+
+    <!-- 색상 정의 -->
+    <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+    <material name="green">
+        <color rgba="0.0 1.0 0.0 1.0"/>
+    </material>
+    <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+    </material>
+    <material name="orange">
+        <color rgba="1.0 0.5 0.0 1.0"/>
+    </material>
+    <material name="purple">
+        <color rgba="0.5 0.0 0.5 1.0"/>
+    </material>
+
+    <!-- Base Link -->
+    <link name="base_link" />
+
+
+<!--순서-->
+<!--   1=>2=>3=>... => body => right+left  -->
+
+
+    <!-- Joint 1 -->
+    <link name="joint1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <!-- Link 2 -->
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Joint 3 -->
+    <link name="joint3">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint3.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- Link 4 -->
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link4.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+    <!-- Link 5 -->
+    <link name="link5">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link5.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+    </link>
+
+    <!-- Link 6 -->
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link6.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <!-- Joint 7 -->
+    <link name="joint7">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint7.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Link 8 -->
+    <link name="link8">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link8.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- Link 9 -->
+    <link name="link9">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link9.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+    <!-- Link 10 -->
+    <link name="link10">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link10.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+    </link>
+
+    <!-- Joint 11 -->
+    <link name="joint11">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint11.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <!-- Link 12 -->
+    <link name="link12">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link12.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Joint 13 -->
+    <link name="joint13">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint13.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+
+
+
+    <!-- Finger Center -->
+    <link name="finger_center">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/finger_center.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <!-- Left Finger 1 -->
+    <link name="left_finger1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/left_finger1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Right Finger 1 -->
+    <link name="right_finger1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/right_finger1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Left Finger 2 -->
+    <link name="left_finger2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/left_finger2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- Right Finger 2 -->
+    <link name="right_finger2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/right_finger2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- Left Finger 3 -->
+    <link name="left_finger3">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/left_finger3.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+    <!-- Right Finger 3 -->
+    <link name="right_finger3">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/right_finger3.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+    <!-- Left Finger 4 -->
+    <link name="left_finger4">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/left_finger4.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+    </link>
+
+    <!-- Right Finger 4 -->
+    <link name="right_finger4">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/right_finger4.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+    </link>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Base to Joint1 -->
+    <joint name="base_joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="joint1"/>
+        <origin xyz="0 0.006 0" rpy="1.57 0 0"/> <!-- 6mm -->
+        <axis xyz="0 1 0"/> <!-- z축 회전 -->
+        <limit lower="-3.14159" upper="3.14159" effort="50.0" velocity="1.0"/>
+    </joint>
+
+    <!-- Joint1 to Link2 -->
+    <joint name="joint1_link2" type="fixed">
+        <parent link="joint1"/>
+        <child link="link2"/>
+        <origin xyz="0 0.0445 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Link2 to Joint3 -->
+    <joint name="link2_joint3" type="fixed">
+        <parent link="link2"/>
+        <child link="joint3"/>
+        <origin xyz="0 0.0655 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Joint3 to Link4 -->
+    <joint name="joint3_link4" type="revolute">
+        <parent link="joint3"/>
+        <child link="link4"/>
+        <origin xyz="0 0.0655 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="50.0" velocity="1.0"/>
+    </joint>
+
+    <!-- Link4 to Link5 -->
+    <joint name="link4_link5" type="fixed">
+        <parent link="link4"/>
+        <child link="link5"/>
+        <origin xyz="0 0.094 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Link5 to Link6 -->
+    <joint name="link5_link6" type="fixed">
+        <parent link="link5"/>
+        <child link="link6"/>
+        <origin xyz="0 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Link6 to Joint7 -->
+    <joint name="link6_joint7" type="fixed">
+        <parent link="link6"/>
+        <child link="joint7"/>
+        <origin xyz="0.024 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Joint7 to Link8 -->
+    <joint name="joint7_link8" type="revolute">
+        <parent link="joint7"/>
+        <child link="link8"/>
+        <origin xyz="0.024 0.1935 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="50.0" velocity="1.0"/>
+    </joint>
+
+    <!-- Link8 to Link9 -->
+    <joint name="link8_link9" type="fixed">
+        <parent link="link8"/>
+        <child link="link9"/>
+        <origin xyz="0.0525 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Link9 to Link10 -->
+    <joint name="link9_link10" type="fixed">
+        <parent link="link9"/>
+        <child link="link10"/>
+        <origin xyz="0.127 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Link10 to Joint11 -->
+    <joint name="link10_joint11" type="fixed">
+        <parent link="link10"/>
+        <child link="joint11"/>
+        <origin xyz="0.148 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Joint11 to Link12 -->
+    <joint name="joint11_link12" type="fixed">
+        <parent link="joint11"/>
+        <child link="link12"/>
+        <origin xyz="0.148 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+    <!-- Link12 to Joint13 -->
+    <joint name="link12_joint13" type="fixed">
+        <parent link="link12"/>
+        <child link="joint13"/>
+        <origin xyz="0.193 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+
+
+    <!--Gripper 1 -->
+    <joint name="joint13_lbody1" type="fixed">
+        <parent link="joint13"/>
+        <child link="left_finger1"/>
+        <origin xyz="0.2155 0.1935 -0.0143" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="joint13_rbody1" type="fixed">
+        <parent link="joint13"/>
+        <child link="right_finger1"/>
+        <origin xyz="0.2155 0.1935 0.0143" rpy="0 0 0"/>
+    </joint>
+
+    <!--Gripper 2 -->
+    <joint name="lbody1_lbody2" type="prismatic">
+        <parent link="left_finger1"/>
+        <child link="left_finger2"/>
+        <origin xyz="0.2155 0.1935 -0.02861" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/> <!-- z축 방향 -->
+        <limit lower="0.0" upper="18" effort="50.0" velocity="3.0"/>
+    </joint>
+
+    <joint name="rbody1_rbody2" type="fixed">
+        <parent link="right_finger1"/>
+        <child link="right_finger2"/>
+        <origin xyz="0.2155 0.1935 0.02861" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="0.0" upper="-18.0" effort="50.0" velocity="3.0"/>
+        <mimic joint="lbody1_lbody2" multiplier="-1.0"/> <!-- gripper_right의 반대 방향으로 이동 -->
+    </joint>
+
+    <!--Gripper center -->
+    <joint name="center" type="fixed">
+        <parent link="left_finger1"/>
+        <child link="finger_center"/>
+        <origin xyz="0.2155 0.1935 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <!--Gripper 3 -->
+    <joint name="lbody2_lbody3" type="fixed">
+        <parent link="left_finger2"/>
+        <child link="left_finger3"/>
+        <origin xyz="0.2296 0.1935 -0.01611" rpy="0 0 0"/>
+    </joint>
+
+
+   <joint name="rbody2_rbody3" type="fixed">
+        <parent link="right_finger2"/>
+        <child link="right_finger3"/>
+        <origin xyz="0.2296 0.1935 0.01611" rpy="0 0 0"/>
+    </joint>
+
+    <!--Gripper 4 -->
+    <joint name="lbody3_lbody4" type="fixed">
+        <parent link="left_finger3"/>
+        <child link="left_finger4"/>
+        <origin xyz="0.2743 0.1935 -0.01411" rpy="0 0 0"/>
+    </joint>
+
+
+   <joint name="rbody3_rbody4" type="fixed">
+        <parent link="right_finger3"/>
+        <child link="right_finger4"/>
+        <origin xyz="0.2743 0.1935 0.01411" rpy="0 0 0"/>
+    </joint>
+
+
+
+
+</robot>

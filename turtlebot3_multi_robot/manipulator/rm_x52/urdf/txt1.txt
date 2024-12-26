@@ -1,0 +1,250 @@
+<?xml version="1.0" ?>
+<robot name="rx_m52">
+
+    <!-- 색상 정의 -->
+    <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+    </material>
+    <material name="green">
+        <color rgba="0.0 1.0 0.0 1.0"/>
+    </material>
+    <material name="blue">
+        <color rgba="0.0 0.0 1.0 1.0"/>
+    </material>
+    <material name="orange">
+        <color rgba="1.0 0.5 0.0 1.0"/>
+    </material>
+    <material name="purple">
+        <color rgba="0.5 0.0 0.5 1.0"/>
+    </material>
+
+    <!-- Base Link -->
+    <link name="base_link" />
+
+
+<!--순서-->
+<!--   1=>2=>3=>... => body => right+left  -->
+
+
+    <!-- Joint 1 -->
+    <link name="joint1">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint1.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <!-- Link 2 -->
+    <link name="link2">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link2.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Joint 3 -->
+    <link name="joint3">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint3.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- Link 4 -->
+    <link name="link4">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link4.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+   <!-- Joint 5 -->
+    <link name="joint5">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint5.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- Link 6 -->
+    <link name="link6">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link6.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Joint 7 -->
+    <link name="joint7">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint7.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+    <!-- Link 8 -->
+    <link name="link8">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/link8.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="green"/>
+        </visual>
+    </link>
+
+    <!-- Joint 9 -->
+    <link name="joint9">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/joint9.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="blue"/>
+        </visual>
+    </link>
+
+    <!-- gripper_body -->
+    <link name="gripper_body">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/gripper_body.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="red"/>
+        </visual>
+    </link>
+
+
+    <!-- gripper_left -->
+    <link name="gripper_left">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/gripper_left.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="purple"/>
+        </visual>
+    </link>
+
+
+    <!-- gripper_right -->
+    <link name="gripper_right">
+        <visual>
+            <geometry>
+                <mesh filename="package://rm_x52/meshes/gripper_right.stl" scale="1 1 1"/>
+            </geometry>
+            <material name="orange"/>
+        </visual>
+    </link>
+
+
+
+
+
+    <!-- Joints -->
+    <joint name="base_joint1" type="revolute">
+        <parent link="base_link"/>
+        <child link="joint1"/>
+        <origin xyz="0 0 0" rpy="1.57 0 0"/>
+        <axis xyz="0 1 0"/>   <!-- z축 회전-->
+        <limit lower="-3.14159" upper="3.14159" effort="50.0" velocity="1.0"/>
+    </joint>
+
+
+    <joint name="joint1_link2" type="fixed">
+        <parent link="joint1"/>
+        <child link="link2"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="link2_joint3" type="fixed">
+        <parent link="link2"/>
+        <child link="joint3"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="joint3_link4" type="revolute">
+        <parent link="joint3"/>
+        <child link="link4"/>
+        <origin xyz="0 50 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="50.0" velocity="1.0"/>
+    </joint>
+
+
+    <joint name="link4_joint5" type="fixed">
+        <parent link="link4"/>
+        <child link="joint5"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="joint5_link6" type="revolute">
+        <parent link="joint5"/>
+        <child link="link6"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="50.0" velocity="1.0"/>
+    </joint>
+
+
+    <joint name="link6_joint7" type="fixed">
+        <parent link="link6"/>
+        <child link="joint7"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="joint7_link8" type="revolute">
+        <parent link="joint7"/>
+        <child link="link8"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="1.57" effort="50.0" velocity="1.0"/>
+    </joint>
+
+
+    <joint name="link8_joint9" type="fixed">
+        <parent link="link8"/>
+        <child link="joint9"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+
+    <joint name="joint9_body" type="fixed">
+        <parent link="joint9"/>
+        <child link="gripper_body"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </joint>
+
+    <joint name="body-right" type="prismatic">
+        <parent link="gripper_body"/>
+        <child link="gripper_right"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>    <!--xyz = 0 1 0-->
+        <axis xyz="0 0 1"/> <!-- z축 방향 -->
+        <limit lower="0.0" upper="18" effort="50.0" velocity="3.0"/>
+    </joint>
+
+    <joint name="body-left" type="prismatic">
+        <parent link="gripper_body"/>
+        <child link="gripper_left"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <axis xyz="0 0 1"/>
+        <limit lower="0.0" upper="-18.0" effort="50.0" velocity="3.0"/>
+        <mimic joint="body-right" multiplier="-1.0"/> <!-- gripper_right의 반대 방향으로 이동 -->
+    </joint>
+
+</robot>

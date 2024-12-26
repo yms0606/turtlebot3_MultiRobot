@@ -1,0 +1,172 @@
+<?xml version="1.0"?>
+<robot name="turtlebot3_manipulation">
+
+  <!-- Material Definitions -->
+  <material name="light_black">
+    <color rgba="0.1 0.1 0.1 1.0"/>
+  </material>
+
+  <material name="dark">
+    <color rgba="0.2 0.2 0.2 1.0"/>
+  </material>
+
+  <material name="grey">
+    <color rgba="0.5 0.5 0.5 1.0"/>
+  </material>
+
+  <!-- TurtleBot3 Waffle Pi Definition -->
+  <link name="base_footprint"/>
+
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.010" rpy="0 0 0"/>
+  </joint>
+
+  <link name="base_link">
+    <visual>
+      <origin xyz="-0.064 0 0.0" rpy="0 0 0"/>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/base.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="light_black"/>
+    </visual>
+  </link>
+
+  <!-- Wheels -->
+  <joint name="wheel_left_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_left_link"/>
+    <origin xyz="0.0 0.144 0.023" rpy="-1.57 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="wheel_left_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/left_tire.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+  </link>
+
+  <joint name="wheel_right_joint" type="continuous">
+    <parent link="base_link"/>
+    <child link="wheel_right_link"/>
+    <origin xyz="0.0 -0.144 0.023" rpy="-1.57 0 0"/>
+    <axis xyz="0 0 1"/>
+  </joint>
+
+  <link name="wheel_right_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="1.57 0 0"/>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/right_tire.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="dark"/>
+    </visual>
+  </link>
+
+  <!-- OpenManipulator-X -->
+  <joint name="base_fixed" type="fixed">
+    <parent link="base_link"/>
+    <child link="link1"/>
+    <origin xyz="-0.092 0.0 0.091" rpy="0 0 0"/>
+  </joint>
+
+  <link name="link1">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/link1.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+
+  <joint name="joint1" type="revolute">
+    <parent link="link1"/>
+    <child link="link2"/>
+    <origin xyz="0.012 0.0 0.017" rpy="0 0 0"/>
+    <axis xyz="0 0 1"/>
+    <limit lower="-2.827" upper="2.827" effort="1.0" velocity="1.0"/>
+  </joint>
+
+  <link name="link2">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/link2.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+
+  <joint name="joint2" type="revolute">
+    <parent link="link2"/>
+    <child link="link3"/>
+    <origin xyz="0.0 0.0 0.0595" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-1.8" upper="1.57" effort="1.0" velocity="1.0"/>
+  </joint>
+
+  <link name="link3">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/link3.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+
+  <joint name="joint3" type="revolute">
+    <parent link="link3"/>
+    <child link="link4"/>
+    <origin xyz="0.024 0 0.128" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.827" upper="2.827" effort="1.0" velocity="1.0"/>
+  </joint>
+
+  <link name="link4">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/link4.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+
+  <joint name="joint4" type="revolute">
+    <parent link="link4"/>
+    <child link="link5"/>
+    <origin xyz="0.124 0.0 0.0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-2.827" upper="2.827" effort="1.0" velocity="1.0"/>
+  </joint>
+
+  <link name="link5">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/link5.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+
+  <!-- Grippers -->
+  <joint name="gripper_left_joint" type="prismatic">
+    <parent link="link5"/>
+    <child link="gripper_left_link"/>
+    <origin xyz="0.0817 0.021 0.0" rpy="0 0 0"/>
+    <axis xyz="0 1 0"/>
+    <limit lower="-0.01" upper="0.019" effort="1.0" velocity="1.0"/>
+  </joint>
+
+  <link name="gripper_left_link">
+    <visual>
+      <geometry>
+        <mesh filename="package://turtlebot3/meshes/gripper_left_palm.stl" scale="0.001 0.001 0.001"/>
+      </geometry>
+      <material name="grey"/>
+    </visual>
+  </link>
+</robot>

@@ -1,0 +1,18 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/juna/turtle_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/juna/turtle_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/juna/turtle_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
+        "/home/juna/turtle_ws/install/nav2_wfd/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/juna/turtle_ws/install/turtlebot3_teleop/lib/python3.10/site-packages",
+        "/home/juna/turtle_ws/install/turtlebot3_example/lib/python3.10/site-packages",
+        "/home/juna/turtle_ws/install/turtlebot3_msgs/local/lib/python3.10/dist-packages",
+        "/home/juna/turtle_ws/install/nav2_wfd/lib/python3.10/site-packages",
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages"
+    ]
+}
