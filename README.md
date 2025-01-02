@@ -1,11 +1,12 @@
 # 🤖 Multi-Robot Control System with TurtleBot3 Simulation
 
-This repository demonstrates a multi-robot control system developed using **TurtleBot3 Simulation**. The project includes simultaneous and individual robot control with a user-friendly **Flask-based UI**. The system is designed to provide real-time monitoring and manual control of multiple robots in a shared environment.
-
+This project demonstrates a multi-robot control system developed using **TurtleBot3 Simulation**. The project includes simultaneous and individual robot control with **Flask-based UI**. The system is designed to provide real-time monitoring and manual control of multiple robots in a shared environment.
+<br><br>**동일한 개발 환경 내에서 ROS2를 활용하여 2개 이상의 터틀봇을 동시&개별 제어하는 프로젝트를 구현하였습니다.**
 <br>
 <br>
+<br>
 
-## 📋 Project Overview
+## 📋 Project Features
 
 - **Multi-Robot Simulation**: 
   Supports launching and controlling multiple robots in a simulated environment.
@@ -16,33 +17,16 @@ This repository demonstrates a multi-robot control system developed using **Turt
 - **Real-Time Map**: 
   Displays the entire map with the positions of all robots updated in real-time.
 - **Camera Feed**: 
-  Allows users to view the live video feed from an individual robot's camera.
+  Show users to view the live video feed from an individual robot's camera.
 - **Manual Control**: 
   Includes teleoperation features for direct control of robots.
 
 <br>
+
+## Demos
 <br>
 
-## 🌟 Key Features
-
-- **Simultaneous and Individual Control**: 
-  Manage multiple robots in real-time through the UI.
-- **Live Position Tracking**: 
-  Monitor the location of all robots on a shared map.
-- **Single Robot Perspective**: 
-  View the camera feed from a selected robot.
-- **Teleoperation**: 
-  Control robots manually using a keyboard-like interface.
-
-<br>
-<br>
-
-## 🎮 User Interface
-
-The Flask-based UI includes:
-1. **Real-Time Map**: Displays the positions of all active robots.
-2. **Camera View**: Shows the live feed from a selected robot's camera.
-3. **Teleoperation Panel**: Provides controls for manually operating a robot.
+https://github.com/user-attachments/assets/bc23c3a7-73ed-4c80-9e3b-ade36d1c0d60
 
 <br>
 <br>
